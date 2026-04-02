@@ -9,6 +9,7 @@ import org.nd4j.linalg.factory.Nd4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -19,25 +20,27 @@ public class VentaDataService {
     @Autowired
     DetalleVentaRepository detalleVentaRepository;
 
+
     public INDArray cargarVentas(){
         List<VentaModel> ventas = ventaRepository.findAll();
-        List<DetalleVentaModel> detalleVentas = detalleVentaRepository.findAll();
 
-        if(ventas.isEmpty()){
-            throw new IllegalStateException("No hay datos disponibles");
+        if (ventas.isEmpty()){
+            throw new IllegalStateException("No hay ninguna venta registrada");
         }
 
-        int numFilas = ventas.size();
-        int numCols = 2;
-
-        double[][] datos = new double[numFilas][numCols];
-
-        for(int i = 0; i< numFilas; i++){
-            VentaModel venta = ventas.get(i);
-            DetalleVentaModel detalleVenta = detalleVentas.get(i);
-            datos[i][0] = venta.getTotalPagado();
-            datos[i][1] = detalleVenta.getCantidad();
+        List<double[]> filas = new ArrayList<>();
+        for(VentaModel venta: ventas){
+            List<DetalleVentaModel> detalles = detalleVentaRepository.findByVentaId(venta.getId());
+            for (DetalleVentaModel detalle: detalles){
+                filas.add(new double[]{venta.getTotalPagado(), detalle.getCantidad()});
+            }
         }
+
+        if(filas.isEmpty()){
+            throw new IllegalStateException("No hay datos disponibles en detalles");
+        }
+
+        double[][] datos = filas.toArray(new double[0][]);
 
         return Nd4j.create(datos);
     }
