@@ -1,5 +1,5 @@
 ## Tazy-SM
-Este software es un sistema web en pruebas, inteligente de gestión de ventas desarrollado para microempresas textiles en Chiquinquirá. Integra el seguimiento de ventas tradicional con análisis predictivo y machine learning, brindando soporte a la toma de decisiones y mejorando el rendimiento del negocio de microempresas. Creado por Will ZP y Miguel Sierra, expuesto en el trabajo de grado titulado "Software de Gestión de Ventas para microempresas textiles en el municipio de Chiquinquirá, con Análisis Predictivo y Machine Learning". 
+Este software es un sistema web en pruebas, inteligente de gestión de ventas desarrollado para microempresas textiles en Chiquinquirá. Integra el seguimiento de ventas tradicional con análisis predictivo y deep learning, brindando soporte a la toma de decisiones y mejorando el rendimiento del negocio de microempresas. Creado por Will ZP y Miguel Sierra, expuesto en el trabajo de grado titulado "Software de Gestión de Ventas para microempresas textiles en el municipio de Chiquinquirá, con Análisis Predictivo y Machine Learning". 
 
 ### Tecnologías expuestas
 - **Backend**: Framework Spring Boot junto al gestor de bases de datos - MYSQL 8.4.
@@ -18,8 +18,6 @@ Este software es un sistema web en pruebas, inteligente de gestión de ventas de
 - En la parte del Backend se creará una API REST con el framework de JAVA, Spring Boot y sus dependencias: Spring Web, Spring Data JPA, MYSQL Driver y Lombok, y sus librerias DeepLearning4j, DataVec, Jasperreports*
 - En la parte del Fronted se consumira el API con ayuda de la herramienta POSTMAN, posteriormente se hará la conexión entre frontend y backend con JavaScript Vanilla, finalmente se hará el diseño de la web con HTML, CSS y el Framework tailwindcss. 
 - Control y registro de una microempresas con los modulos expuestos. Ademas de generar ventas esperadas a los productos textiles.
-
-## Configuración de la base de datos
 
 
 > La ciencia de hoy, es la tecnología del mañana. — Edward Teller
