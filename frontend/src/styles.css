@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+@import 'material-icons/iconfont/outlined.css';
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: 
+        url(../public/assets/fonts/space-grotesk.woff2) format("woff2"),
+        url(../public/assets/fonts/space-grotesk.ttf) format("truetype");
+    font-display: swap;
+}
+
+:root {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+}

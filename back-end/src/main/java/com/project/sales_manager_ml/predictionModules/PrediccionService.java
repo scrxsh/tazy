@@ -32,7 +32,7 @@ public class PrediccionService {
     @PostConstruct
     public void cargarInicializar(){
 
-        File folder = new File("src/main/resources/nodels");
+        File folder = new File("src/main/resources/models");
         if(!folder.exists()){
             folder.mkdirs();
             System.out.println("Carpeta models creada.");

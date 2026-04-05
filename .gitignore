@@ -147,3 +147,7 @@ back-end/src/test
 back-end/src/main/resources/models
 back-end/.idea
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij
+
+#Frontend Ignorar
+/frontend/node_modules/
+/frontend/.angular
