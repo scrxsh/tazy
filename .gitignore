@@ -141,13 +141,14 @@ hs_err_pid*
 replay_pid*
 
 # Ignorar carpetas de archivos generados
-back-end/uploads/
-back-end/target/
-back-end/src/test
-back-end/src/main/resources/models
-back-end/.idea
+backend/uploads/
+backend/target/
+backend/src/test
+backend/src/main/resources/models
+backend/.idea
+backend/HELP.md
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij
 
 #Frontend Ignorar
-/frontend/node_modules/
-/frontend/.angular
+frontend/node_modules/
+frontend/.angular
